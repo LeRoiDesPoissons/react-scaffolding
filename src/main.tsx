@@ -5,9 +5,8 @@ import { RouterProvider } from '@tanstack/react-router';
 import { Provider as StoreProvider } from 'react-redux';
 import 'normalize.css';
 
-import { router } from './router';
-import { queryClient } from './queryClient';
-import { store } from './store';
+import { router, queryClient } from '@globals';
+import { store } from '@store';
 
 const rootElement = document.getElementById('root')!;
 

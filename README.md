@@ -1,4 +1,4 @@
-# Vitea
+# React scaffolding
 
 ## Installation
 
@@ -8,10 +8,4 @@ Always install all dependencies for development, without devDependencies Husky w
 
 ```Bash
 yarn
-```
-
-### Husky
-
-```Bash
-husky
 ```

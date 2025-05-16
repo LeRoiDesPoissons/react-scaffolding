@@ -8,6 +8,7 @@ import reactQuery from '@tanstack/eslint-plugin-query';
 import reactRedux from 'eslint-plugin-react-redux';
 import importSort from 'eslint-plugin-import';
 import eslintPlugin from 'eslint-plugin-prettier/recommended';
+import vitest from '@vitest/eslint-plugin';
 
 export default tseslint.config(
 	eslintPlugin,
@@ -50,6 +51,16 @@ export default tseslint.config(
 					],
 				},
 			],
+		},
+	},
+	{
+		files: ['**/*.test.ts', '**/*.test.tsx'],
+		plugins: {
+			vitest,
+		},
+		rules: {
+			...vitest.configs.recommended.rules,
+			'vitest/max-nested-describe': ['error', { max: 2 }],
 		},
 	},
 );
